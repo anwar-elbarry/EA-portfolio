@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -19,12 +20,17 @@ const HeroSection = () => {
             I build exceptional digital experiences with modern technologies. Specializing in both frontend and backend development to create seamless, responsive applications.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-primary text-primary-foreground" size="lg" asChild>
-              <a href="#projects">View My Work</a>
-            </Button>
             <Button variant="outline" size="lg" asChild>
               <a href="#contact">Get In Touch</a>
             </Button>
+            <Button  
+                asChild
+              >
+                <a href="/resume.pdf" download="Anouar_ElBarry_Resume.pdf">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Download CV
+                </a>
+              </Button>
           </div>
         </div>
         <div className="flex justify-center items-center">

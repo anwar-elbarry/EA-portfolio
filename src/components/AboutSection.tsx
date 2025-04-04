@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Mail, Github, Linkedin, Code } from "lucide-react";
 
 const AboutSection = () => {
   return (
