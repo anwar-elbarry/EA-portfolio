@@ -96,9 +96,14 @@ const Navbar = () => {
               ))}
             </nav>
             <ThemeToggle />
-            <Button className="bg-primary text-primary-foreground">
-              Download CV
-            </Button>
+            <Button  
+                asChild
+              >
+                <a href="/resume.pdf" download="Anouar_ElBarry_Resume.pdf">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Download CV
+                </a>
+              </Button>
           </div>
         )}
       </div>
