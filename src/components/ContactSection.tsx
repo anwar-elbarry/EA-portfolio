@@ -38,8 +38,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:your.email@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      your.email@example.com
+                    <a href="mailto:elbarry.anouar.contact@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    elbarry.anouar.contact@gmail.com
                     </a>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium">Phone</p>
                     <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                      +212 718369154
                     </a>
                   </div>
                 </div>
@@ -63,30 +63,13 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium">Location</p>
                     <p className="text-muted-foreground">
-                      City, Country
+                      Marrakresh, MOROCCO
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-            
-            <div className="bg-secondary/50 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Working Hours</h3>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>Closed</span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
