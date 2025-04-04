@@ -4,6 +4,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu, X } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,9 +71,14 @@ const Navbar = () => {
                     {link.name}
                   </button>
                 ))}
-                <Button className="bg-primary text-primary-foreground w-full mt-2">
+                <Button  
+                asChild
+              >
+                <a href="/resume.pdf" download="Anouar_ElBarry_Resume.pdf">
+                  <FileText className="mr-2 h-4 w-4" />
                   Download CV
-                </Button>
+                </a>
+              </Button>
               </div>
             )}
           </>
