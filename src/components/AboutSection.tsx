@@ -51,23 +51,23 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <SkillCard
                 title="Frontend Development"
-                skills={[{name :'JavaScript' , logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"}, {name : "TypeScript", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg"}, {name :"React", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"},{name : "Vue.js", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"}, { name :"HTML5", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"}, {name :"Tailwind CSS",logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"}]}
-                icon={<Code className="h-6 w-6" />}
+                skills={[{name :'JavaScript' , logo : "devicon-javascript-plain colored"}, {name : "TypeScript", logo : "devicon-typescript-plain colored"}, {name :"React", logo : "devicon-react-original-wordmark colored"},{name : "Vue.js", logo : "devicon-vuejs-plain-wordmark colored"}, { name :"HTML5", logo : "devicon-html5-plain-wordmark colored"}, {name :"Tailwind CSS",logo : "devicon-tailwindcss-plain-wordmark colored text-8xl"}]}
+                icon={"fa-solid fa-display"}
               />
               <SkillCard
                 title="Backend Development"
-                skills={[{name : "PHP", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-plain.svg"},{name:"Laravel", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"}]}
-                icon={<Code className="h-6 w-6" />}
+                skills={[{name : "PHP", logo : "devicon-php-plain"},{name:"Laravel", logo : "devicon-laravel-plain colored"}]}
+                icon={"fa-solid fa-gear"}
               />
               <SkillCard
                 title="Database"
-                skills={[{name :"PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"}, {name :"MySQL", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"}]}
-                icon={<Code className="h-6 w-6" />}
+                skills={[{name :"PostgreSQL", logo: "devicon-postgresql-plain-wordmark colored"}, {name :"MySQL", logo : "devicon-mysql-plain-wordmark colored text-7xl"}]}
+                icon={"fa-solid fa-database"}
               />
               <SkillCard
                 title="Tools & Others"
-                skills={[{name :"Git", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg"},{ name :"Docker", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"}, {name :"Github", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"}, {name :"Vercel", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg"}, {name :"Netlify", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original-wordmark.svg"}, {name :"Postman", logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-plain.svg"},{name : "Swagger" , logo : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"}]}
-                icon={<Code className="h-6 w-6" />}
+                skills={[{name :"Git", logo : "devicon-git-plain colored"},{ name :"Docker", logo : "devicon-docker-plain-wordmark colored"}, {name :"Github", logo : "devicon-github-original"}, {name :"Vercel", logo : "devicon-vercel-original-wordmark text-7xl"}, {name :"Netlify", logo : "devicon-netlify-plain-wordmark colored text-7xl"}, {name :"Postman", logo : "devicon-postman-plain colored"},{name : "Swagger" , logo : "devicon-swagger-plain colored"}]}
+                icon={"fa-solid fa-tools"}
               />
             </div>
           </div>
@@ -81,23 +81,21 @@ const AboutSection = () => {
 interface SkillCardProps {
   title: string;
   skills: Array<{name : string , logo : string}>;
-  icon?: React.ReactNode;
+  icon: string;
 }
 
 const SkillCard = ({ title, skills, icon }: SkillCardProps) => (
   <Card>
     <CardContent className="p-6">
       <div className="flex items-center gap-3 mb-4">
-        {icon}
+      <i className={`${icon} text-white text-3xl`}></i>
         <h4 className="font-bold">{title}</h4>
       </div>
-      <ul className="space-y-2 flex flex-wrap gap-4">
+      <ul className="space-y-2 flex flex-wrap justify-center items-center gap-6">
         {skills.map((skill, i) => (
           <li key={i}>
-            <img 
-              src={skill.logo} 
-              alt={`${skill.name} logo`} 
-              className="h-16 w-16 inline-block mr-2" 
+            <i 
+              className={`${skill.logo} text-6xl tex0 opacity-50 transition-all duration-300 hover:opacity-100`}
             />
           </li>
         ))}

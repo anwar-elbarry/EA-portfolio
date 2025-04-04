@@ -52,6 +52,20 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				animation: {
+					slide: 'slide 15s linear infinite',
+					slide2: 'slide2 15s linear infinite'
+				  },
+				  keyframes: {
+					slide: {
+					  '0%': { transform: 'translateX(0)' },
+					  '100%': { transform: 'translateX(-100%)' }
+					},
+					slide2: {
+					  '0%': { transform: 'translateX(100%)' },
+					  '100%': { transform: 'translateX(0)' }
+					}
 				}
 			},
 			borderRadius: {
