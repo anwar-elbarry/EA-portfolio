@@ -35,9 +35,9 @@ const HeroSection = () => {
         </div>
         <div className="flex justify-center items-center">
           <img 
-            src="/profile.jpg"
+            src="/profile.png"
             alt="Anouar El barry"
-            className="w-120 h-80 rounded-full object-cover shadow-lg"
+            className="w-120 h-120 rounded-full object-cover shadow-lg"
           />
         </div>
       </div>
